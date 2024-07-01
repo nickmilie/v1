@@ -44,35 +44,31 @@ W drugim etapie chcielibyśmy abyś przygotował implementację obsługującą t
 podstawie
 interfejsów oraz klas abstrakcyjnych z pierwszego etapu.
 
-* zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece. (Book.java)
-* zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki. (
-  CreateBookRequest.java)
-* zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki.  (
-  CreateBookResponse.java)
+* zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece.
+* zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki.
+* zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki.
 * zaimplementuj klasę, która będzie odpowiedzialna za mapowanie danych wejściowych i wyjściowych
-  pomiędzy DTO a encją. (BookMapper.java)
-* zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych. (
-  BookValidator.java)
-* zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki.  (
-  BookService.java)
+  pomiędzy DTO a encją.
+* zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych.
+* zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki.
 * zaimplementuj klasę, która będzie odpowiedzialna za obsługę zapytań HTTP związanych z tworzeniem
-  książki. (BookController.java)
+  książki.
 
 ### Wymagania techniczne
 
-| **Wymaganie**                                                                                                                                                                    | **Szczegóły**                                                                                       |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Czas realizacji do 14 dni roboczych                                                                                                                                              | Chcielibyśmy abyś zakończył realizację zadania w ciągu 14 dni roboczych.                            |
-| Komunikacja z backendem powinna odbywać się poprzez REST API                                                                                                                     | -                                                                                                   |
-| Odpowiedzi z serwera powinny być w formacie JSON.                                                                                                                                | Zwróć uwagę na kody http odpowiedzi.                                                                |
-| API powinno być otwarte.                                                                                                                                                         | Api nie powinno wymagać autoryzacji.                                                                |
-| Kod powinien być odpowiednio udokumentowany.                                                                                                                                     | -                                                                                                   |
-| Zestaw testów jednostkowych                                                                                                                                                      | -                                                                                                   |
-| Zestaw testów integracyjnych                                                                                                                                                     | -                                                                                                   | 
-| Magazynowanie danych w bazie danych in-memory.                                                                                                                                   | Wybór bazy pozostawiamy kandydatowi - nie ma dla nas znaczenia czy będzie to h2, mysql, postgresql. | 
-| Przygotowanie struktury danych i aktualizacja struktury w momencie uruchomienia aplikacji                                                                                        | Postaraj się wykorzystać najlepsze znane praktyki.                                                  |
-| Jeżeli w celu uruchomienia projektu będą potrzebne niestandardowe kroki powinieneś o nich wspomnieć w README.md                                                                  | -                                                                                                   |
-| Pakiet "com.energysolution.recrutation.common.create" powinien zawierać abstrakcję, które zaimplementujesz w pakiecie "com.energysolution.recrutation.books.application.create"; |                                                                                                     |
+| **Wymaganie**                                                                                                                                                                   | **Szczegóły**                                                                                       |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| Czas realizacji do 14 dni roboczych                                                                                                                                             | Chcielibyśmy abyś zakończył realizację zadania w ciągu 14 dni roboczych.                            |
+| Komunikacja z backendem powinna odbywać się poprzez REST API                                                                                                                    | -                                                                                                   |
+| Odpowiedzi z serwera powinny być w formacie JSON.                                                                                                                               | Zwróć uwagę na kody http odpowiedzi.                                                                |
+| API powinno być otwarte.                                                                                                                                                        | Api nie powinno wymagać autoryzacji.                                                                |
+| Kod powinien być odpowiednio udokumentowany.                                                                                                                                    | -                                                                                                   |
+| Zestaw testów jednostkowych                                                                                                                                                     | -                                                                                                   |
+| Zestaw testów integracyjnych                                                                                                                                                    | -                                                                                                   | 
+| Magazynowanie danych w bazie danych in-memory.                                                                                                                                  | Wybór bazy pozostawiamy kandydatowi - nie ma dla nas znaczenia czy będzie to h2, mysql, postgresql. | 
+| Przygotowanie struktury danych i aktualizacja struktury w momencie uruchomienia aplikacji                                                                                       | Postaraj się wykorzystać najlepsze znane praktyki.                                                  |
+| Jeżeli w celu uruchomienia projektu będą potrzebne niestandardowe kroki powinieneś o nich wspomnieć w README.md                                                                 | -                                                                                                   |
+| Pakiet "com.energysolution.recrutation.common.create" powinien zawierać abstrakcję, które zaimplementujesz w pakiecie "com.energysolution.recrutation.books.application.create" |                                                                                                     |
 
 ### User story
 
