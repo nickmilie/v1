@@ -25,29 +25,31 @@ Wymagania techniczne są minimalnymi wymaganiami, które muszą zostać spełnio
 nie zostanie przez nas w żadeń sposób komercyjnie wykorzystany i służy jedynie do celów
 prezentacyjnych.
 
-Zadanie skład się z dwóch etapów. 
+Zadanie skład się z dwóch etapów.
 
 W pierwszym etapie chcielibyśmy abyś przygotował interfejsy odpowiedzialne za:
+
 * operację tworzenia encji
 * logikę biznesową tworzenia encji
 * mapowanie oraz walidację danych wejściowych
 
 Następnie przygotuj 2 klasy abtrakcyjne:
+
 * Abstrakcyjną klasę kontrollera
 * Abstrakcyjną klasę obsługująca logikę biznesową
 
 Od Ciebie zależy w jaki sposób zaimplentujesz poszczególne kroki tworzenia encji.
 
-W drugim etapie chcielibyśmy abyś przygotował implementację obsługującą tworzenie książki na podstawie 
-interfejsów oraz klas abstrakcyjnych z pierwszego etapu. 
-
-    • zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece.
-    • zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki. 
-    • zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki. 
-    • zaimplementuj klasę, która będzie odpowiedzialna za mapowanie danych wejściowych i wyjściowych pomiędzy DTO a encją.
-    • zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych.
-    • zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki. 
-    • zaimplementuj klasę, która będzie odpowiedzialna za obsługę zapytań HTTP związanych z tworzeniem książki.
+W drugim etapie chcielibyśmy abyś przygotował implementację obsługującą tworzenie książki na
+podstawie
+interfejsów oraz klas abstrakcyjnych z pierwszego etapu.
+* zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece. (Book.java)
+* zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki. (CreateBookRequest.java)
+* zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki.  (CreateBookResponse.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za mapowanie danych wejściowych i wyjściowych pomiędzy DTO a encją. (BookMapper.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych. (BookValidator.java)
+* zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki.  (BookService.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za obsługę zapytań HTTP związanych z tworzeniem książki. (BookController.java)
 
 
 ### Wymagania techniczne
@@ -68,13 +70,18 @@ interfejsów oraz klas abstrakcyjnych z pierwszego etapu.
 
 ### User story
 
-Jako użytkownik chciałbym mieć możliwość dodania nowej książki do bibloteki. Książka składać się będzie z nastepujących danych wejściowych:
+Jako użytkownik chciałbym mieć możliwość dodania nowej książki do bibloteki. Książka składać się
+będzie z nastepujących danych wejściowych:
+
 * Tytuł książki - maksymalnie 100 znaków, jedynie znaki alfanumeryczne
-* Autor książki - imię oraz nazwisko w postaci tekstu. 
-* ISBN - tekst, powinien walidować format zgodnie z ISBN-10 (https://pl.wikipedia.org/wiki/Mi%C4%99dzynarodowy_znormalizowany_numer_ksi%C4%85%C5%BCki - proszę nie implementować sum kontrolnych)
+* Autor książki - imię oraz nazwisko w postaci tekstu.
+* ISBN - tekst, powinien walidować format zgodnie z
+  ISBN-10 (https://pl.wikipedia.org/wiki/Mi%C4%99dzynarodowy_znormalizowany_numer_ksi%C4%85%C5%BCki -
+  proszę nie implementować sum kontrolnych)
 * Data publikacji z godziną - format DD-MM-YYYY
 
 Api w odpowiedzi powinno zwrócić dane książki w formacie json:
+
 ```
 {
    "title":"tytuł",
@@ -86,12 +93,13 @@ Api w odpowiedzi powinno zwrócić dane książki w formacie json:
    "publicationDate":"01-01-1900 00:00:00"
 }
 ```
+
 # Pytania do zadania
 
 Jeżeli masz jakieś pytania napisz e-mail na
-adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl)
+adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl) lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
 
 # Sposób przekazania rozwiązania
 
 Umieść projekt w publicznym repozytorium github i wyślij link do niego na
-adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl)
+adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl) lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
