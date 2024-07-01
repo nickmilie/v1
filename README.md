@@ -43,14 +43,20 @@ Od Ciebie zależy w jaki sposób zaimplentujesz poszczególne kroki tworzenia en
 W drugim etapie chcielibyśmy abyś przygotował implementację obsługującą tworzenie książki na
 podstawie
 interfejsów oraz klas abstrakcyjnych z pierwszego etapu.
-* zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece. (Book.java)
-* zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki. (CreateBookRequest.java)
-* zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki.  (CreateBookResponse.java)
-* zaimplementuj klasę, która będzie odpowiedzialna za mapowanie danych wejściowych i wyjściowych pomiędzy DTO a encją. (BookMapper.java)
-* zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych. (BookValidator.java)
-* zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki.  (BookService.java)
-* zaimplementuj klasę, która będzie odpowiedzialna za obsługę zapytań HTTP związanych z tworzeniem książki. (BookController.java)
 
+* zdefiniuj klasę domenową, która będzie reprezentować książkę w bibliotece. (Book.java)
+* zdefiniuj klasę, która będzie reprezentować dane wejściowe do tworzenia książki. (
+  CreateBookRequest.java)
+* zdefiniuj klasę, która będzie reprezentować dane wyjściowe z operacji tworzenia książki.  (
+  CreateBookResponse.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za mapowanie danych wejściowych i wyjściowych
+  pomiędzy DTO a encją. (BookMapper.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za walidację danych wejściowych. (
+  BookValidator.java)
+* zaimplementuj klasę, która będzie zawierać logikę biznesową operacji tworzenia książki.  (
+  BookService.java)
+* zaimplementuj klasę, która będzie odpowiedzialna za obsługę zapytań HTTP związanych z tworzeniem
+  książki. (BookController.java)
 
 ### Wymagania techniczne
 
@@ -84,22 +90,21 @@ Api w odpowiedzi powinno zwrócić dane książki w formacie json:
 
 ```
 {
-   "title":"tytuł",
-   "author":{
-      "firstName":"imię",
-      "lastName":"nazwisko"
-   },
-   "ISBN":"numer isbn",
-   "publicationDate":"01-01-1900 00:00:00"
+   "title": "Tytuł",
+   "author": "Imię Nazwisko"
+   "ISBN": "Numer isbn",
+   "publicationDate": "01-01-1900 00:00:00"
 }
 ```
 
 # Pytania do zadania
 
 Jeżeli masz jakieś pytania napisz e-mail na
-adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl) lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
+adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl)
+lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
 
 # Sposób przekazania rozwiązania
 
 Umieść projekt w publicznym repozytorium github i wyślij link do niego na
-adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl) lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
+adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl)
+lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
