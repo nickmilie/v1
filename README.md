@@ -110,12 +110,18 @@ lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolutio
 Documentation
 
 Swagger endpoint
+
+```
 /swagger-ui/index.html
+```
 
 JavaDoc location 
-
+```
 documentation/
+```
 
 Maven generated JavaDoc location 
 
-target/site/apidocs/index.html
+```
+target/site/apidocs/
+```
