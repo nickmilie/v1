@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.energysolution.recrutation"},{"l":"com.energysolution.recrutation.books.application"},{"l":"com.energysolution.recrutation.books.domain"},{"l":"com.energysolution.recrutation.common.create"},{"l":"com.energysolution.recrutation.common.framework"}];updateSearchResults();
