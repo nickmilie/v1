@@ -24,7 +24,7 @@ public class BookControllerTest {
     @Test
     void should_return_status_200() throws Exception {
 
-        String json = "{\"title\":\"Tytuł\",\"author\":\"ImięNazwisko\",\"isbn\":\"9780521705266\",\"publicationDate\":\"01-01-1900 00:00:00\"}";
+        String json = "{\"title\":\"title\",\"author\":\"author\",\"isbn\":\"9780521705266\",\"publicationDate\":\"01-01-1900 00:00:00\"}";
         this.mockMvc.perform(post("/books")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(json))
