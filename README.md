@@ -104,3 +104,18 @@ lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolutio
 Umieść projekt w publicznym repozytorium github i wyślij link do niego na
 adres [Dominik Dziąg (d.dziag@energysolution.pl)](mailto:d.dziag@energysolution.pl)
 lub [Dominik Maciąg (d.maciag@energysolution.pl)](mailto:d.maciag@energysolution.pl)
+
+# Notes
+
+Documentation
+
+Swagger endpoint
+/swagger-ui/index.html
+
+JavaDoc location 
+
+documentation/
+
+Maven generated JavaDoc location 
+
+target/site/apidocs/index.html
