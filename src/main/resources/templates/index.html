@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Contact V12</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/util.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}">
+
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <div class="bg-contact100" style="background-image: url('images/bg-01.jpg');">
+        <div class="container-contact100">
+            <div class="wrap-contact100" id="content">
+                <div class="contact100-pic js-tilt" data-tilt>
+                    <img th:src="@{/images/img-01.svg}" alt="IMG">
+                </div>
+                <book-form />
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/js/main.js}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script type="text/babel">
+        Vue.component('book-form', {
+            data() {
+                return {
+                    title: '',
+                    author: '',
+                    isbn: '',
+                    publicationDate: ''
+                }
+            },
+            methods: {
+                sendData() {
+                    axios.post('http://localhost:8080/books', { title: this.title, author: this.author, isbn: this.isbn, publicationDate: this.publicationDate })
+                        .then(
+                            response => { console.log("SENT") }
+                        )
+                        .catch(error => {
+                            console.log(error)
+                        }
+                        )
+                }
+            },
+            template: `<form v-on:submit.prevent="sendData" class="contact100-form validate-form">
+<span class="contact100-form-title">
+Save Book
+</span>
+                <div class="wrap-input100 validate-input" data-validate="Title is required">
+                    <input class="input100" type="text" name="title" placeholder="Title" v-model="title">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Author is required">
+                    <input class="input100" type="text" name="author" placeholder="Author" v-model="author">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="ISBN is required">
+                    <input class="input100" type="text" name="isbn" placeholder="ISBN" v-model="isbn">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Date is required">
+                    <input class="input100" type="text" name="date" placeholder="Date" v-model="publicationDate">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+<i class="fa fa-user" aria-hidden="true"></i>
+</span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        Save
+                    </button>
+                </div>
+            </form>`
+        });
+
+        var app = new Vue({
+            el: '#content',
+            data: {
+            },
+            methods: {
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
