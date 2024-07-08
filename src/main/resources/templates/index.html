@@ -3,7 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Contact V12</title>
+    <title>Books</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,17 +37,27 @@
                     title: '',
                     author: '',
                     isbn: '',
-                    publicationDate: ''
+                    publicationDate: '',
+                    success: false,
+                    error: false,
+                    errorMessage: ''
                 }
             },
             methods: {
                 sendData() {
                     axios.post('http://localhost:8080/books', { title: this.title, author: this.author, isbn: this.isbn, publicationDate: this.publicationDate })
                         .then(
-                            response => { console.log("SENT") }
+                            response => { 
+                                console.log("SENT"); 
+                                this.success = true;
+                                this.error = false;
+                            }
                         )
                         .catch(error => {
-                            console.log(error)
+                            console.log(error);
+                            this.success = false;
+                            this.error = true;
+                            this.errorMessage = error.data.error;
                         }
                         )
                 }
@@ -78,7 +88,7 @@ Save Book
 </span>
                 </div>
                 <div class="wrap-input100 validate-input" data-validate="Date is required">
-                    <input class="input100" type="text" name="date" placeholder="Date" v-model="publicationDate">
+                    <input class="input100" type="text" name="date" placeholder="Publication date: dd-MM-yyyy HH:mm:ss" v-model="publicationDate">
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
 <i class="fa fa-user" aria-hidden="true"></i>
@@ -90,6 +100,8 @@ Save Book
                         Save
                     </button>
                 </div>
+                <div v-if = "success" class = "contact100-success">Success</div>
+                <div v-if = "error" class="contact100-error">Error {{errorMessage}}</div>
             </form>`
         });
 
