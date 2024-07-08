@@ -4,6 +4,7 @@ import com.energysolution.recrutation.common.framework.Request;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +19,7 @@ public class BookRequest implements Request {
 
     @NotNull
     @NotEmpty
+    @Pattern(regexp = "[a-zA-Z0-9]{1,100}")
     private String title;
 
     @NotNull
